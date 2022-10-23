@@ -1,231 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/7661e59942.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styleSlider.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Lead Quest</title>
-</head>
-<body >
-    <header class="header">
-            <div class="wrapper">
-                <div class="header__wrapper">
-                    <div class="header__nav">
-                        <div class="header__label">
-                            <p>Lead Quest</p>
-                        </div>
-                        <nav class="header__menu" id="menu">
-                            <ul class="header__list">
-                                <li class="header__link  scrollLink"><a href="#about" class="">О нас</a></li>
-                                <li class="header__link js-scroll"><a href="#benefits">Услуги</a></li>
-                                <li class="header__link js-scroll"><a href="#blogers">Блогеры</a></li>
-                                <li class="header__link js-scroll"><a href="#contacts">Контакты</a></li>
-                            </ul>
-                            <div class="header__nav-close">
-                                <span class="header__nav-close-line"></span>
-                                <span class="header__nav-close-line"></span>
-                            </div>
-                        </nav>
-                        <div class="header__burger burger">
-                            <span class="burger__line burger__line-first"></span>
-                            <span class="burger__line burger__line-second"></span>
-                            <span class="burger__line burger__line-third"></span>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        
-    </header>
-    <main>
-        <section class="intro" id="intro">
-            <div class="wrapper">
-                <div class="intro__wrapper">
-                    <div class="intro__left">
-                        <h1 class="intro__title">Lead Quest</h1>
-                        <p class="intro__text">Поможем вашему бизнесу найти новых клиентов</p>
-                    </div>
-                    <div class="intro__right">
-                        <form action="#" method="post" class="_anim-items">
-                            <div class="form__title">
-                                <h3>Обратная связь</h3>
-                            </div>
-                            <div class="form__name">
-                                <input type="email" name="userMail" placeholder="Ваша почта" >
-                            </div>
-                            <div class="form__subject">
-                                <input type="text" name="userName" placeholder="Ваше имя">
-                            </div>
-                            <div class="form__text">
-                                <textarea name="userText"  placeholder="Ваше сообщение"></textarea>
-                            </div>
-                            <div class="form__submit">
-                                <button type="submit">Отправить</button>
-                            </div>
-    
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-        <section class="aboutUs _anim-items" id="about">
-                <div class="aboutUs__wrapper">
-                    <div class="aboutUs__text">
-                        <h2>О нас</h2>
-                        <p>Рекламное агентство Lead Quest осуществляют продвижение услуг
-                            и продуктов клиента путём привлечения к нему интереса.
-                            Мы представляем блогеров в странах СНГ.
-                            Имеем опыт продвежения рекламных компаний и блогеров.</p>
 
-                           <div class="aboutUs__work">
-                            <h3>В чем заключается наша работа?</h3>
-                            <p>Помочь блогерам найти своего рекламодателя,а рекламодателям своего блогера</p>
-                           </div>
-                    </div>
-                    <div class="aboutUs__img">
-                        <div><img src="img/intro.png" alt=""></div>
-                    </div>
-                </div>
-        </section>
-        <section class="benefits" id="benefits">
-            <div class="wrapper">
-                <div class="benefits__text">
-                    <h2>Преимущества такой рекламы?</h2>
-                    <ul class="benefits__list">
-                        <li class="benefits__list-item benefitsOne _anim-items"><p>Пожожет повысить узнаваемость бренда</p> <img src="img/svg/1.svg" alt="" ></li>
-                        <li class="benefits__list-item benefitsSecond _anim-items"> <img src="img/svg/3.svg" alt=""><p>Привлечение новых<br> клиентов</p></li>
-                        <li class="benefits__list-item benefitsThree _anim-items"><p>Повышение <br>лояльности к бренду</p><img src="img/svg/2.svg" alt=""></li>
-                    </ul>
-                </div>
-                
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/7661e59942.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styleSlider.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Lead Quest</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__wrapper">
+        <div class="header__nav">
+          <div class="header__label">
+            <p>Lead Quest</p>
+          </div>
+          <nav class="header__menu" id="menu">
+            <ul class="header__list">
+              <li class="header__link scrollLink">
+                <a href="#about" class="">О нас</a>
+              </li>
+              <li class="header__link js-scroll">
+                <a href="#benefits">Услуги</a>
+              </li>
+              <li class="header__link js-scroll">
+                <a href="#blogers">Блогеры</a>
+              </li>
+              <li class="header__link js-scroll">
+                <a href="#contacts">Контакты</a>
+              </li>
+            </ul>
+            <div class="header__nav-close">
+              <span class="header__nav-close-line"></span>
+              <span class="header__nav-close-line"></span>
             </div>
-        </section>
-        <section class="blogers" id="blogers">
-            <div class="wrapper">
-                <div class="blogers__title">
-                    <h2>Наши Блогеры</h2>
-                </div>
-                <div class="blogers__slider _anim-items ">
-                    <div class="slider__img" style="background-image: url(img/1.jpg);">
-                        
-                        <div class="img__info">
-                            <div class="img__info-youtube">
-                                <img src="img/svg/youtube.svg" alt="">
-                                <p>Подписчики : 123123</p>
-                            </div>
-                            <div class="img__info-link">
-                                <img src="img/prosm.png" alt="">
-                                <p>Просмотры : 2345655</p>
-                            </div>
-                            <div class="img__info-inst">
-                                <img src="img/svg/link.svg" alt="">
-                                <p><span>Ссылка : </span><a href="#"> https://www.youtube.com/</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__img" style="background-image: url(img/2.jpg);">
-                        <div class="img__info">
-                            <div class="img__info-youtube">
-                                <img src="img/svg/youtube.svg" alt="">
-                                <p>Подписчики : 123123</p>
-                            </div>
-                            <div class="img__info-link">
-                                <img src="img/prosm.png" alt="">
-                                <p>Просмотры : 2345655</p>
-                            </div>
-                            <div class="img__info-inst">
-                                <img src="img/svg/link.svg" alt="">
-                                <p><span>Ссылка : </span><a href="#"> https://www.youtube.com/</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__img" style="background-image: url(img/3.jpg);">
-                        <div class="img__info">
-                            <div class="img__info-youtube">
-                                <img src="img/svg/youtube.svg" alt="">
-                                <p>Подписчики : 123123</p>
-                            </div>
-                            <div class="img__info-link">
-                                <img src="img/prosm.png" alt="">
-                                <p>Просмотры : 2345655</p>
-                            </div>
-                            <div class="img__info-inst">
-                                <img src="img/svg/link.svg" alt="">
-                                <p><span>Ссылка : </span><a href="#"> https://www.youtube.com/</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__img" style="background-image: url(img/4.jpg);">
-                        <div class="img__info">
-                            <div class="img__info-youtube">
-                                <img src="img/svg/youtube.svg" alt="">
-                                <p>Подписчики : 123123</p>
-                            </div>
-                            <div class="img__info-link">
-                                <img src="img/prosm.png" alt="">
-                                <p>Просмотры : 2345655</p>
-                            </div>
-                            <div class="img__info-inst">
-                                <img src="img/svg/link.svg" alt="">
-                                <p><span>Ссылка : </span><a href="#"> https://www.youtube.com/</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__img" style="background-image: url(img/5.jpg);">
-                        <div class="img__info">
-                            <div class="img__info-youtube">
-                                <img src="img/svg/youtube.svg" alt="">
-                                <p>Подписчики : 123123</p>
-                            </div>
-                            <div class="img__info-link">
-                                <img src="img/prosm.png" alt="">
-                                <p>Просмотры : 2345655</p>
-                            </div>
-                            <div class="img__info-inst">
-                                <img src="img/svg/link.svg" alt="">
-                                <p><span>Ссылка : </span> <a href="#"> https://www.youtube.com/</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="blogers__slidbar _anim-items">
-                    <div class="blogers__img">
-                        <img src="img/1.jpg" alt="">
-                    </div>
-                    <div class="blogers__img">
-                        <img src="img/2.jpg" alt="">
-                    </div>
-                    <div class="blogers__img">
-                        <img src="img/3.jpg" alt="">
-                    </div>
-                    <div class="blogers__img">
-                        <img src="img/4.jpg" alt="">
-                    </div>
-                    <div class="blogers__img">
-                        <img src="img/5.jpg" alt="">
-                    </div>
-                </div>
+          </nav>
+          <div class="header__burger burger">
+            <span class="burger__line burger__line-first"></span>
+            <span class="burger__line burger__line-second"></span>
+            <span class="burger__line burger__line-third"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="intro" id="intro">
+      <div class="wrapper">
+        <div class="intro__wrapper">
+          <div class="intro__left">
+            <h1 class="intro__title">Lead Quest</h1>
+            <p class="intro__text">
+              Поможем вашему бизнесу найти новых клиентов
+            </p>
+          </div>
+          <div class="intro__right">
+            <form action="#" method="post" class="_anim-items">
+              <div class="form__title">
+                <h3>Обратная связь</h3>
+              </div>
+              <div class="form__name">
+                <input type="email" name="userMail" placeholder="Ваша почта" />
+              </div>
+              <div class="form__subject">
+                <input type="text" name="userName" placeholder="Ваше имя" />
+              </div>
+              <div class="form__text">
+                <textarea name="userText" placeholder="Ваше сообщение"></textarea>
+              </div>
+              <div class="form__submit">
+                <button type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="aboutUs _anim-items scrollto" id="about">
+      <div class="aboutUs__wrapper">
+        <div class="aboutUs__text">
+          <h2>О нас</h2>
+          <p>
+            Рекламное агентство Lead Quest осуществляют продвижение услуг и
+            продуктов клиента путём привлечения к нему интереса. Мы
+            представляем блогеров в странах СНГ. Имеем опыт продвежения
+            рекламных компаний и блогеров.
+          </p>
+
+          <div class="aboutUs__work">
+            <h3>В чем заключается наша работа?</h3>
+            <p>
+              Помочь блогерам найти своего рекламодателя,а рекламодателям
+              своего блогера
+            </p>
+          </div>
+        </div>
+        <div class="aboutUs__img">
+          <div><img src="img/intro.png" alt="" /></div>
+        </div>
+      </div>
+    </section>
+    <section class="benefits" id="benefits">
+      <div class="wrapper">
+        <div class="benefits__text">
+          <h2>Преимущества такой рекламы?</h2>
+          <ul class="benefits__list">
+            <li class="benefits__list-item benefitsOne _anim-items">
+              <p>Пожожет повысить узнаваемость бренда</p>
+              <img src="img/svg/1.svg" alt="" />
+            </li>
+            <li class="benefits__list-item benefitsSecond _anim-items">
+              <img src="img/svg/3.svg" alt="" />
+              <p>
+                Привлечение новых<br />
+                клиентов
+              </p>
+            </li>
+            <li class="benefits__list-item benefitsThree _anim-items">
+              <p>Повышение <br />лояльности к бренду</p>
+              <img src="img/svg/2.svg" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="blogers" id="blogers">
+      <div class="wrapper">
+        <div class="blogers__title">
+          <h2>Наши Блогеры</h2>
+        </div>
+        <div class="blogers__slider _anim-items">
+          <div class="slider__img" style="background-image: url(img/1.jpg)">
+            <div class="img__info">
+              <div class="img__info-youtube">
+                <img src="img/svg/youtube.svg" alt="" />
+                <p>Подписчики : 123123</p>
+              </div>
+              <div class="img__info-link">
+                <img src="img/prosm.png" alt="" />
+                <p>Просмотры : 2345655</p>
+              </div>
+              <div class="img__info-inst">
+                <img src="img/svg/link.svg" alt="" />
+                <p>
+                  <span>Ссылка : </span><a href="#"> https://www.youtube.com/</a>
+                </p>
+              </div>
             </div>
-        </section>
-        <section class="contacts" id="contacts">
-            <div class="wrapper">
-                <div class="wrapper__contacts">
-                    <h2>Контакты</h2>
-                <ul class="contacts__list">
-                    <li class="contacts__item"><img src="img/email.png" alt=""> <p>Email: asdasd@gamil.com</p></li>
-                    <li class="contacts__item"><img src="img/tel.png" alt=""> <p>Number: 123123213</p></li>
-                    <li class="contacts__item"><img src="img/telegram.png" alt=""> <p>Telegram: asdddd</p></li>
-                </ul>
-                </div>
+          </div>
+          <div class="slider__img" style="background-image: url(img/2.jpg)">
+            <div class="img__info">
+              <div class="img__info-youtube">
+                <img src="img/svg/youtube.svg" alt="" />
+                <p>Подписчики : 123123</p>
+              </div>
+              <div class="img__info-link">
+                <img src="img/prosm.png" alt="" />
+                <p>Просмотры : 2345655</p>
+              </div>
+              <div class="img__info-inst">
+                <img src="img/svg/link.svg" alt="" />
+                <p>
+                  <span>Ссылка : </span><a href="#"> https://www.youtube.com/</a>
+                </p>
+              </div>
             </div>
-        </section>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/script.js"></script>
+          </div>
+          <div class="slider__img" style="background-image: url(img/3.jpg)">
+            <div class="img__info">
+              <div class="img__info-youtube">
+                <img src="img/svg/youtube.svg" alt="" />
+                <p>Подписчики : 123123</p>
+              </div>
+              <div class="img__info-link">
+                <img src="img/prosm.png" alt="" />
+                <p>Просмотры : 2345655</p>
+              </div>
+              <div class="img__info-inst">
+                <img src="img/svg/link.svg" alt="" />
+                <p>
+                  <span>Ссылка : </span><a href="#"> https://www.youtube.com/</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slider__img" style="background-image: url(img/4.jpg)">
+            <div class="img__info">
+              <div class="img__info-youtube">
+                <img src="img/svg/youtube.svg" alt="" />
+                <p>Подписчики : 123123</p>
+              </div>
+              <div class="img__info-link">
+                <img src="img/prosm.png" alt="" />
+                <p>Просмотры : 2345655</p>
+              </div>
+              <div class="img__info-inst">
+                <img src="img/svg/link.svg" alt="" />
+                <p>
+                  <span>Ссылка : </span><a href="#"> https://www.youtube.com/</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slider__img" style="background-image: url(img/5.jpg)">
+            <div class="img__info">
+              <div class="img__info-youtube">
+                <img src="img/svg/youtube.svg" alt="" />
+                <p>Подписчики : 123123</p>
+              </div>
+              <div class="img__info-link">
+                <img src="img/prosm.png" alt="" />
+                <p>Просмотры : 2345655</p>
+              </div>
+              <div class="img__info-inst">
+                <img src="img/svg/link.svg" alt="" />
+                <p>
+                  <span>Ссылка : </span>
+                  <a href="#"> https://www.youtube.com/</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blogers__slidbar _anim-items">
+          <div class="blogers__img">
+            <img src="img/1.jpg" alt="" />
+          </div>
+          <div class="blogers__img">
+            <img src="img/2.jpg" alt="" />
+          </div>
+          <div class="blogers__img">
+            <img src="img/3.jpg" alt="" />
+          </div>
+          <div class="blogers__img">
+            <img src="img/4.jpg" alt="" />
+          </div>
+          <div class="blogers__img">
+            <img src="img/5.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts" id="contacts">
+      <div class="wrapper">
+        <div class="wrapper__contacts">
+          <h2>Контакты</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <img src="img/email.png" alt="" />
+              <p>Email: asdasd@gamil.com</p>
+            </li>
+            <li class="contacts__item">
+              <img src="img/tel.png" alt="" />
+              <p>Number: 123123213</p>
+            </li>
+            <li class="contacts__item">
+              <img src="img/telegram.png" alt="" />
+              <p>Telegram: asdddd</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
