@@ -128,25 +128,25 @@ if (animItems.length > 0) {
 
 //form
 
-const form = document.querySelector("form");
-
-form.addEventListener("submit", sendForm);
-
-async function sendForm(e) {
-  e.preventDefault();
-  let formData = new FormData(form);
-  let response = await fetch("sendmail.php", {
-    method: "POST",
-    body: formData,
+$(document).ready(function () {
+  //E-mail Ajax Send
+  $("form").submit(function () {
+    //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize(),
+    }).done(function () {
+      alert("Thank you!");
+      setTimeout(function () {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
   });
-  if (response.ok) {
-    let result = await response.json();
-    alert(result.message);
-    form.reset();
-  } else {
-    alert("error");
-  }
-}
+});
 
 // modal
 const modal = document.getElementById("see-modal");
