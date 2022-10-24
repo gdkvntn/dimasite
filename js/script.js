@@ -125,3 +125,52 @@ if (animItems.length > 0) {
     }
   }
 })();
+
+//form
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", sendForm);
+
+async function sendForm(e) {
+  e.preventDefault();
+  let formData = new FormData(form);
+  let response = await fetch("sendmail.php", {
+    method: "POST",
+    body: formData,
+  });
+  if (response.ok) {
+    let result = await response.json();
+    alert(result.message);
+    form.reset();
+  } else {
+    alert("error");
+  }
+}
+
+// modal
+const modal = document.getElementById("see-modal");
+const body = document.querySelector("body");
+const btn = document.getElementById("see-btn");
+
+const span = document.getElementsByClassName("see-close")[0];
+
+btn.onclick = function () {
+  modal.style.visibility = "visible";
+  modal.style.opacity = 1;
+  body.style.overflow = "hidden";
+};
+
+span.onclick = function () {
+  modal.style.visibility = "hidden";
+  modal.style.opacity = 0;
+  body.style.overflow = "auto";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.visibility = "hidden";
+    modal.style.opacity = 0;
+    body.style.overflow = "auto";
+  }
+};
