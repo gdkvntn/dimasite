@@ -128,26 +128,6 @@ if (animItems.length > 0) {
 
 //form
 
-$(document).ready(function () {
-  //E-mail Ajax Send
-  $("form").submit(function () {
-    //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize(),
-    }).done(function () {
-      alert("Thank you!");
-      setTimeout(function () {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
-});
-
 // modal
 const modal = document.getElementById("see-modal");
 const body = document.querySelector("body");
