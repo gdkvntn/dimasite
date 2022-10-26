@@ -4,7 +4,7 @@ const mailer = require("./mailer");
 require("dotenv").config();
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT;
 let user = undefined;
 app.use("/css", express.static(__dirname + "/css"));
 app.use("/js", express.static(__dirname + "/js"));
@@ -24,7 +24,7 @@ app.post("", (req, res) => {
   res.redirect("/");
 });
 
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
   if (typeof user !== "object") return res.sendFile(__dirname + "/index.html");
   user = undefined;
 });

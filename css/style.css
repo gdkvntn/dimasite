@@ -247,6 +247,11 @@ body {
   font-weight: 700;
   color: #eee8ff;
 }
+.header__label img {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
 
 .header__burger {
   display: none;
