@@ -1129,6 +1129,40 @@ body {
   width: 225px;
   height: 225px;
 }
+
+.form-modal {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 4;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #876ed779;
+  transition: 0.4s linear;
+}
+
+.form-modal_content {
+  text-align: center;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #876ed7;
+  border-radius: 20px;
+  box-shadow: 0 2px 20px #876ed7;
+  max-width: 400px;
+  margin: 0 10px 0 10px;
+}
+.form-modal_content h2 {
+  padding: 8px 0 8px 0;
+}
+
 .seeAllContainer {
   text-align: center;
 }
@@ -1169,9 +1203,12 @@ body {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
-
+  border: 1px solid #876ed7;
+  border-radius: 20px;
   box-shadow: 0 2px 20px #876ed7;
+}
+.see-modal_content h2 {
+  padding-top: 8px;
 }
 .see__list {
   display: flex;
@@ -1184,14 +1221,18 @@ body {
   align-items: center;
 }
 
-.see-close {
+.see-close,
+.form-close {
   color: #aaaaaa;
+
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
 .see-close:hover,
+.form-close:hover,
+.form-close:focus,
 .see-close:focus {
   color: #000;
   text-decoration: none;

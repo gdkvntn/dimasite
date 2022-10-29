@@ -60,18 +60,13 @@
             </p>
           </div>
           <div class="intro__right">
-            <form action="/" method="post" id='form' class="_anim-items">
-
-              <input type="hidden" name="project_name" value="Site Name">
-              <input type="hidden" name="admin_email" value="antonhudkou@gmail.com">
-              <input type="hidden" name="form_subject" value="Form Subject">
-
+            <form action="/" id='form' class="_anim-items">
 
               <div class="form__title">
                 <h3>Обратная связь</h3>
               </div>
               <div class="form__name">
-                <input type="email" name="userMail" placeholder="Ваша почта" />
+                <input class="user-mail" type="email" name="userMail" placeholder="Ваша почта" />
               </div>
               <div class="form__subject">
                 <input type="text" name="subject" placeholder="Заголовок" />
@@ -83,6 +78,13 @@
                 <button type="submit">Отправить</button>
               </div>
             </form>
+            <div id="form-modal" class="form-modal">
+              <div class="form-modal_content">
+                <span class="form-close">&times;</span>
+                <h2 class="form-modal_text"></h2>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
@@ -184,11 +186,11 @@
             <div class="img__info">
               <div class="img__info-youtube">
                 <img src="img/svg/youtube.svg" alt="" />
-                <p>Подписчики : 123123</p>
+                <p>Подписчики : 420000</p>
               </div>
               <div class="img__info-link">
                 <img src="img/prosm.png" alt="" />
-                <p>Просмотры : 2345655</p>
+                <p>Просмотры : 320000</p>
               </div>
               <div class="img__info-inst">
                 <img src="img/svg/link.svg" alt="" />

@@ -13,11 +13,13 @@ const transporter = nodemailer.createTransport({
 });
 
 let mailer = (message) => {
-  transporter.sendMail(message, (err, info) => {
-    if (err) {
-      console.log("err");
-    }
-    console.log("succes");
+  return new Promise((res, rej) => {
+    transporter.sendMail(message, (err, info) => {
+      if (err) {
+        rej(err);
+      }
+      res(info);
+    });
   });
 };
 

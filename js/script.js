@@ -127,8 +127,60 @@ if (animItems.length > 0) {
 })();
 
 //form
+const form = document.querySelector("#form");
+const modalForm = document.querySelector(".form-modal");
+let formModalText = document.querySelector(".form-modal_text");
+const formModalClose = document.querySelector(".form-close");
+const mail = document.querySelector(".user-mail");
+const EMAIL_REGEXP =
+  /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
-// modal
+function onEmail() {
+  if (isEmailValid(mail.value)) {
+    mail.style.borderColor = "green";
+  } else {
+    mail.style.borderColor = "red";
+  }
+}
+function isEmailValid(value) {
+  return EMAIL_REGEXP.test(value);
+}
+mail.addEventListener("input", onEmail);
+
+formModalClose.addEventListener("click", () => {
+  modalForm.style.visibility = "hidden";
+  modalForm.style.opacity = 0;
+  body.style.overflow = "auto";
+});
+form.addEventListener("submit", formSend);
+function formSend(e) {
+  e.preventDefault();
+
+  let formData = new FormData(form);
+
+  if (isEmailValid(mail.value)) {
+    fetch(`${form.action}`, {
+      method: "POST",
+      body: formData,
+    }).then((res) => {
+      modalForm.style.visibility = "visible";
+      modalForm.style.opacity = 1;
+      body.style.overflow = "hidden";
+      if (res.ok) {
+        formModalText.textContent =
+          "Благодарим, отправка прошла успешно , с вами свяжуться в ближайшее время.";
+      } else {
+        formModalText.textContent = "Простите, при отправке возникла ошибка.";
+      }
+    });
+  } else {
+    modalForm.style.visibility = "visible";
+    modalForm.style.opacity = 1;
+    body.style.overflow = "hidden";
+    formModalText.textContent = "Введите корректный E-MAIL.";
+  }
+}
+// modal see
 const modal = document.getElementById("see-modal");
 const body = document.querySelector("body");
 const btn = document.getElementById("see-btn");
@@ -151,6 +203,11 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.visibility = "hidden";
     modal.style.opacity = 0;
+    body.style.overflow = "auto";
+  }
+  if (event.target == modalForm) {
+    modalForm.style.visibility = "hidden";
+    modalForm.style.opacity = 0;
     body.style.overflow = "auto";
   }
 };
