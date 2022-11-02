@@ -15,52 +15,34 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: true,
     fade: true,
+    dots: true,
     prevArrow:
       "<div class='control-c prev slick-prev'><img class='a-left' src='img/right.png'><div>",
     nextArrow:
       "<div class='control-c next slick-next'><img class='a-right' src='img/right.png'>",
-    asNavFor: ".blogers__slidbar",
-  });
-  $(".blogers__slidbar").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: ".blogers__slider",
-    dots: true,
-    centerMode: true,
-    focusOnSelect: true,
-    arrows: false,
+    
   });
 });
+
+;
 
 $(document).ready(function () {
   $(".js-scroll").on("click", "a", function (event) {
-    //отменяем стандартную обработку нажатия по ссылке
-
-    event.preventDefault();
-
-    //забираем идентификатор бока с атрибута href
-
+    event.preventDefault();   
     var id = $(this).attr("href"),
-      //узнаем высоту от начала страницы до блока на который ссылается якорь
-
       top = $(id).offset().top - 150;
-
-    //анимируем переход на расстояние - top за 1500 мс
-
     $("body,html").animate({ scrollTop: top }, 1500);
   });
 });
-
 $(".scrollLink a").on("click", function () {
   let href = $(this).attr("href");
-
   $("html, body").animate(
     {
       scrollTop: $(href).offset().top - 400,
     },
     {
-      duration: 1500, // по умолчанию «400»
-      easing: "swing", // по умолчанию «swing»
+      duration: 1500, 
+      easing: "swing", 
     }
   );
 });

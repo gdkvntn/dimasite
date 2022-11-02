@@ -316,6 +316,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-between
 }
 
 .intro__right form {
@@ -453,8 +454,8 @@ body {
 }
 .aboutUs__wrapper p {
   font-size: 32px;
-  padding: 0 100px 90px 100px;
-  max-width: 1000px;
+  padding: 0 0px 90px 100px;
+  max-width: 1050px;
 }
 .aboutUs__wrapper h3 {
   font-weight: 700;
@@ -575,9 +576,7 @@ body {
   transform: translateY(0);
 }
 
-.blogers {
-  padding-bottom: 50px;
-}
+
 
 .blogers__title {
   text-align: center;
@@ -736,13 +735,13 @@ body {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
   left: 12%;
-  bottom: 40%;
+  bottom: 55%;
 }
 
 .slick-next {
   position: absolute;
   right: 12%;
-  bottom: 40%;
+  bottom: 55%;
 }
 
 .slick-dots {
@@ -895,11 +894,11 @@ body {
   }
 
   .blogers__slider .slick-prev {
-    bottom: -65px;
+    bottom: 20px;
     left: 30%;
   }
   .blogers__slider .slick-next {
-    bottom: -65px;
+    bottom: 20px;
     right: 30%;
   }
 }
@@ -1017,13 +1016,11 @@ body {
 }
 @media screen and (max-width: 680px) {
   .blogers__slider .slick-prev {
-    bottom: 40%;
-    left: 0;
+    display: none;
   }
 
   .blogers__slider .slick-next {
-    bottom: 40%;
-    right: 0;
+    display: none;
   }
 
   .benefits__list-item {
