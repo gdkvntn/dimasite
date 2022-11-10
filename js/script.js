@@ -13,7 +13,7 @@ $(document).ready(function () {
   $(".blogers__slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows:window.innerWidth<690?false:true,
     fade: true,
     dots: true,
     prevArrow:
@@ -46,6 +46,11 @@ $(".scrollLink a").on("click", function () {
     }
   );
 });
+
+let mask = document.querySelector('.mask')
+window.addEventListener('load',()=>{
+  mask.classList.add('hide')
+})
 
 //animate scroll
 
@@ -137,7 +142,9 @@ formModalClose.addEventListener("click", () => {
 form.addEventListener("submit", formSend);
 function formSend(e) {
   e.preventDefault();
-
+  mask.classList.remove('hide')
+  mask.style.background='#876ed779'
+  
   let formData = new FormData(form);
 
   if (isEmailValid(mail.value)) {
@@ -145,17 +152,21 @@ function formSend(e) {
       method: "POST",
       body: formData,
     }).then((res) => {
+      body.style.overflow = "hidden";
+      mask.classList.add('hide')
       modalForm.style.visibility = "visible";
       modalForm.style.opacity = 1;
-      body.style.overflow = "hidden";
+      
       if (res.ok) {
         formModalText.textContent =
           "Благодарим, отправка прошла успешно , с вами свяжуться в ближайшее время.";
+          e.target.reset()
       } else {
         formModalText.textContent = "Простите, при отправке возникла ошибка.";
       }
     });
   } else {
+    mask.classList.add('hide')
     modalForm.style.visibility = "visible";
     modalForm.style.opacity = 1;
     body.style.overflow = "hidden";
