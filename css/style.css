@@ -17,12 +17,17 @@
 :active {
   outline: none;
 }
-
+a{
+  transition: 0.5s ease-in-out;
+}
 a:focus,
 a:active {
   outline: none;
 }
-
+a:hover{
+  opacity: 0.7;
+  
+}
 nav,
 footer,
 header,
@@ -821,6 +826,13 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+
+.contacts__item img{
+  margin-right: 9px;
+}
+.contacts__item:first-child img{
+  margin-right: 5px;
+}
 .contacts__item p {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,7 +840,22 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  color: black;
+  
 }
+
+.contacts__item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: black;
+  margin-left: 10px;
+  
+}
+
 
 .contacts__list {
   display: -webkit-box;
@@ -838,6 +865,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-bottom: 50px;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1260px) {
@@ -1116,9 +1144,7 @@ body {
     font-size: 32px;
   }
 
-  .contacts__item:first-child {
-    padding-left: 30px;
-  }
+  
 }
 
 .blogers__img img {
@@ -1211,6 +1237,9 @@ body {
   flex-direction: column;
 
   width: 100%;
+}
+.see__list :first-child{
+  transform: translateX(4px);
 }
 .see__item {
   display: flex;
