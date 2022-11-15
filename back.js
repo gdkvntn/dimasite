@@ -20,7 +20,7 @@ app.post("", (req, res) => {
   console.log(req.body);
   const message = {
     from: `${process.env.EMAIL}`,
-    to: "antonhudkou@gmail.com",
+    to: `${process.env.MAILTO}`,
     subject: `${req.body.subject}`,
     text: `Email : ${req.body.userMail} 
     Сообщение : ${req.body.userText}`,
